@@ -1,0 +1,76 @@
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+.senses-wrapper {
+    position: absolute;
+    right: -3%;
+    top: 30%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-sense {
+    position: relative;
+    svg {
+        width: 80% !important;
+        height: 80% !important;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 86px;
+    height: 86px;
+    cursor: pointer;
+    padding: 14.79px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(237, 237, 237, 1);
+}
+
+.face-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+}
+.AvatarEditor {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    .divider {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .iconfont {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &:hover {
+            animation: jelly 0.5s;
+            &:not(.banTip):after {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+}

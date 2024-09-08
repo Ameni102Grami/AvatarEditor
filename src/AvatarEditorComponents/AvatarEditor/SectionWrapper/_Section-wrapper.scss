@@ -1,0 +1,46 @@
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+.selected-sense {
+    height: 32px !important;
+    width: 91px !important;
+    border-radius: 20px;
+}
+.section-wrapper {
+    cursor: pointer;
+    background: #fbf3f326;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 50%;
+    background-color: #ededed;
+    position: relative;
+    &:hover {
+        animation: jelly 0.5s;
+        &:after {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .children-wrapper > svg {
+        margin-left: 5px;
+        width: 80% !important;
+        height: 80% !important;
+    }
+}
