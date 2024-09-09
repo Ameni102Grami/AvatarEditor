@@ -8,11 +8,11 @@
         "module": "commonjs",
         "esModuleInterop": true,
         "noImplicitAny": true,
-
         "forceConsistentCasingInFileNames": true,
         "outDir": "dist/esm",
         "strict": true,
         "skipLibCheck": true,
         "sourceMap": true
-    }
+    },
+    "include": ["src/**/*.ts","src/**/*.tsx", "declarations.d.ts"]
 }

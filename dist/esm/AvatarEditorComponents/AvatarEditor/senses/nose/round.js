@@ -1,0 +1,17 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = NoseRound;
+const react_1 = __importDefault(require("react"));
+function NoseRound() {
+    return (react_1.default.createElement("svg", { style: {
+            width: '10%',
+            height: '10%',
+            top: '15%',
+            left: '46%'
+        }, width: "32", height: "40", viewBox: "0 0 32 40", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+        react_1.default.createElement("path", { d: "M12.307 12.3397C17.753 11.0993 26.6843 12.9603 24.7238 22.8833C22.9813 31.7023 13.6141 32.1857 11 29.7048", stroke: "black", strokeWidth: "4" })));
+}
+//# sourceMappingURL=round.js.map

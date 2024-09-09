@@ -1,10 +1,10 @@
+import React from 'react';
 import { Flex } from 'antd';
 import { useEffect, useState } from 'react';
 import ReactNiceAvatar, { AvatarFullConfig } from 'react-nice-avatar';
 import AvatarList from '../../AvatarList';
 import FaceComponent from './FaceComponent';
 import SectionWrapper from './SectionWrapper';
-import React from 'react';
 
 const AvatarEditor = ({
     config,
@@ -45,7 +45,7 @@ const AvatarEditor = ({
                     borderRadius: '16px 16px 0px 0px'
                 }}
             >
-                <span className="select-avatar-title">'Change your avatar'</span>
+                <span className="select-avatar-title">Change your avatar</span>
                 <ReactNiceAvatar {...config} style={{ width: '10rem', height: '10rem' }} />
                 <Flex align="center" justify="center" style={{ maxWidth: '100%' }}>
                     <AvatarList
@@ -60,16 +60,16 @@ const AvatarEditor = ({
                     />
                 </Flex>
             </Flex>
-            <span className="select-avatar-title">{t('Customize your avatar')}</span>
+            <span className="select-avatar-title">Customize your avatar</span>
             <Flex align="center" justify="center" wrap="wrap" gap={10}>
                 {showSensesStyle &&
-                    showSensesStyle?.children.map((el:any, idx: number) => (
+                    showSensesStyle?.children.map((el: any, idx: number) => (
                         <Flex key={idx} className="avatar-sense" onClick={() => switchConfig(el.configKey, el.senseType)}>
                             {el.sense}
                         </Flex>
                     ))}
             </Flex>
-            <div className="AvatarEditor rounded-full px-3 py-2 gap-10 flex items-center">
+            <div className="avatar-editor rounded-full  px-3 py-2 gap-10 flex items-center">
                 {components.map((item, index) => (
                     <SectionWrapper key={index} className="w-8 h-8 rounded-full p-2 mx-2" tip={item.tip} switchConfig={() => setShowSensesStyle(item)}>
                         {item.component}

@@ -70,49 +70,49 @@ const FaceComponent = (config: AvatarFullConfig) => {
         {
             tip: 'Hair',
             configKey: 'hairStyle',
-            component: <Hair style={config.hairStyle} color={config.hairColor} />,
+            component: <Hair style={config?.hairStyle} color={config.hairColor} />,
             children: [
                 {
                     configKey: 'hairStyle',
                     senseType: 'thick',
-                    sense: <Thick color={config.hairColor} />
+                    sense: <Thick color={config?.hairColor} />
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'mohawk',
-                    sense: <HairMohawk color={config.hairColor} />
+                    sense: <HairMohawk color={config?.hairColor} />
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'womanLong',
-                    sense: <HairWomanLong color={config.hairColor} />
+                    sense: <HairWomanLong color={config?.hairColor} />
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'womanShort',
-                    sense: <HairWomanShort color={config.hairColor} />
+                    sense: <HairWomanShort color={config?.hairColor} />
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'hairNormal',
-                    sense: <HairNormal color={config.hairColor} />
+                    sense: <HairNormal color={config?.hairColor} />
                 }
             ]
         },
         {
             tip: 'Hat',
             configKey: 'hatStyle',
-            component: <Hat style={config.hatStyle} color={config.hatColor} />,
+            component: <Hat style={config?.hatStyle} color={config?.hatColor} />,
             children: [
                 {
                     configKey: 'hatStyle',
                     senseType: 'beanie',
-                    sense: <HatBeanie color={config.hatColor} />
+                    sense: <HatBeanie color={config?.hatColor} />
                 },
                 {
                     configKey: 'hatStyle',
                     senseType: 'turban',
-                    sense: <HatTurban color={config.hatColor} />
+                    sense: <HatTurban color={config?.hatColor} />
                 },
                 {
                     configKey: 'hatStyle',
@@ -124,7 +124,7 @@ const FaceComponent = (config: AvatarFullConfig) => {
         {
             tip: 'Eyes',
             configKey: 'eyeStyle',
-            component: <Eyes style={config.eyeStyle} color="#fff" />,
+            component: <Eyes style={config?.eyeStyle} color="#fff" />,
             children: [
                 { configKey: 'eyeStyle', senseType: 'circle', sense: <CircleEyes /> },
                 { configKey: 'eyeStyle', senseType: 'smile', sense: <EyesSmile /> },
@@ -134,7 +134,7 @@ const FaceComponent = (config: AvatarFullConfig) => {
         {
             tip: 'Glasses',
             configKey: 'glassesStyle',
-            component: <Glasses style={config.glassesStyle} color="#fff" />,
+            component: <Glasses style={config?.glassesStyle} color="#fff" />,
             children: [
                 {
                     configKey: 'glassesStyle',
@@ -151,24 +151,24 @@ const FaceComponent = (config: AvatarFullConfig) => {
         {
             tip: 'Ear',
             configKey: 'earSize',
-            component: <Ear size={config.earSize} color={config.faceColor} />,
+            component: <Ear size={config?.earSize} color={config.faceColor} />,
             children: [
                 {
                     configKey: 'earSize',
                     senseType: 'small',
-                    sense: <EarSmall color={config.faceColor} />
+                    sense: <EarSmall color={config?.faceColor} />
                 },
                 {
                     configKey: 'earSize',
                     senseType: 'big',
-                    sense: <EarBig color={config.faceColor} />
+                    sense: <EarBig color={config?.faceColor} />
                 }
             ]
         },
         {
             tip: 'Nose',
             configKey: 'noseStyle',
-            component: <Nose style={config.noseStyle} color={config.faceColor} />,
+            component: <Nose style={config?.noseStyle} color={config?.faceColor} />,
             children: [
                 { configKey: 'noseStyle', senseType: 'long', sense: <NoseLong /> },
                 { configKey: 'noseStyle', senseType: 'round', sense: <NoseRound /> },
@@ -178,7 +178,7 @@ const FaceComponent = (config: AvatarFullConfig) => {
         {
             tip: 'Mouth',
             configKey: 'mouthStyle',
-            component: <Mouth style={config.mouthStyle} color="#fff" />,
+            component: <Mouth style={config?.mouthStyle} color="#fff" />,
             children: [
                 { configKey: 'mouthStyle', senseType: 'laugh', sense: <MouthLaugh /> },
                 { configKey: 'mouthStyle', senseType: 'smile', sense: <MouthPeace /> },
@@ -188,28 +188,28 @@ const FaceComponent = (config: AvatarFullConfig) => {
         {
             tip: 'Shirt',
             configKey: 'shirtStyle',
-            component: <Shirt style={config.shirtStyle} color={config.shirtColor} />,
+            component: <Shirt style={config?.shirtStyle} color={config?.shirtColor} />,
             children: [
                 {
                     configKey: 'shirtStyle',
                     senseType: 'hoody',
-                    sense: <ShirtHoody color={config.shirtColor} lightColor={config.shirtColor} />
+                    sense: <ShirtHoody color={config?.shirtColor} lightColor={config?.shirtColor} />
                 },
                 {
                     configKey: 'shirtStyle',
                     senseType: 'polo',
-                    sense: <ShirtPolo color={config.shirtColor} lightColor={config.shirtColor} />
+                    sense: <ShirtPolo color={config?.shirtColor} lightColor={config?.shirtColor} />
                 },
                 {
                     configKey: 'shirtStyle',
                     senseType: 'short',
-                    sense: <ShirtShort color={config.shirtColor} />
+                    sense: <ShirtShort color={config?.shirtColor} />
                 }
             ]
         },
         {
             tip: 'EyeBrows',
-            component: <Eyebrow style={config.eyeBrowStyle} />,
+            component: <Eyebrow style={config?.eyeBrowStyle} />,
             children: [
                 {
                     configKey: 'eyeBrowStyle',
