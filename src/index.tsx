@@ -1,16 +1,21 @@
 import React from 'react';
-import { AvatarFullConfig } from 'react-nice-avatar';
+import { AvatarFullConfig, genConfig } from 'react-nice-avatar';
 import AvatarEditor from './AvatarEditorComponents/AvatarEditor';
 const ReactAvatarEditor = ({
-    config,
+    config = genConfig(),
     setConfig,
-    updateConfig
+    withAvatarList = false
 }: {
     config: Required<AvatarFullConfig>;
-    updateConfig: Function;
     setConfig?: React.Dispatch<React.SetStateAction<Required<AvatarFullConfig>>>;
+    withAvatarList?: boolean;
 }) => {
-    return <AvatarEditor config={config} updateConfig={updateConfig} setConfig={setConfig} />;
+
+  const updateConfig = (key: string, value: string) => {
+    config[key] = value;
+    setConfig((prev) => ({ ...prev, key: value }));
+  };
+    return <AvatarEditor config={config} updateConfig={updateConfig} setConfig={setConfig} withAvatarList={withAvatarList} />;
 };
 
 export default ReactAvatarEditor;

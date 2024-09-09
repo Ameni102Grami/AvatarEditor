@@ -9,11 +9,13 @@ import SectionWrapper from './SectionWrapper';
 const AvatarEditor = ({
     config,
     updateConfig,
-    setConfig
+    setConfig,
+    withAvatarList = true
 }: {
     config: Required<AvatarFullConfig>;
     updateConfig: Function;
     setConfig?: React.Dispatch<React.SetStateAction<Required<AvatarFullConfig>>>;
+    withAvatarList?: boolean;
 }) => {
     const switchConfig = (type: string, currentOpt: string | undefined) => {
         updateConfig(type, currentOpt);
@@ -47,18 +49,20 @@ const AvatarEditor = ({
             >
                 <span className="select-avatar-title">Change your avatar</span>
                 <ReactNiceAvatar {...config} style={{ width: '10rem', height: '10rem' }} />
-                <Flex align="center" justify="center" style={{ maxWidth: '100%' }}>
-                    <AvatarList
-                        config={config}
-                        selectConfig={(newConfig: Required<AvatarFullConfig>) => {
-                            setConfig(newConfig);
-                            setShowSensesStyle((prev: Required<AvatarFullConfig>) => ({
-                                ...prev,
-                                children: []
-                            }));
-                        }}
-                    />
-                </Flex>
+                {withAvatarList && (
+                    <Flex align="center" justify="center" style={{ maxWidth: '100%' }}>
+                        <AvatarList
+                            config={config}
+                            selectConfig={(newConfig: Required<AvatarFullConfig>) => {
+                                setConfig(newConfig);
+                                setShowSensesStyle((prev: Required<AvatarFullConfig>) => ({
+                                    ...prev,
+                                    children: []
+                                }));
+                            }}
+                        />
+                    </Flex>
+                )}
             </Flex>
             <span className="select-avatar-title">Customize your avatar</span>
             <Flex align="center" justify="center" wrap="wrap" gap={10}>
