@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Turban from './turban';
 import Beanie from './beanie';
 

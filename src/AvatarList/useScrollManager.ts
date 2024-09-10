@@ -1,10 +1,8 @@
 import { useState, useRef } from 'react';
 
-
 function useScrollManager(scrollContainerRef: React.RefObject<HTMLElement>) {
     const [scrollAmount, setScrollAmount] = useState(400);
 
-  
     const handleScrollLeft = () => {
         if (scrollContainerRef.current) {
             scrollContainerRef.current.scrollTo({
@@ -13,7 +11,6 @@ function useScrollManager(scrollContainerRef: React.RefObject<HTMLElement>) {
             });
         }
     };
-
 
     const handleScrollRight = () => {
         if (scrollContainerRef.current) {

@@ -1,3 +1,4 @@
+import React from 'react';
 export default function HatTurban(props: { color: string }): SVGElement {
     const { color } = props;
     return (

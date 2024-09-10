@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Hair;
+const react_1 = __importDefault(require("react"));
 const thick_1 = __importDefault(require("./thick"));
 const mohawk_1 = __importDefault(require("./mohawk"));
 const womanLong_1 = __importDefault(require("./womanLong"));
@@ -12,16 +13,16 @@ function Hair(props) {
     const { style, color, colorRandom } = props;
     switch (style) {
         case 'thick':
-            return React.createElement(thick_1.default, { color: color, colorRandom: colorRandom });
+            return react_1.default.createElement(thick_1.default, { color: color, colorRandom: colorRandom });
         case 'mohawk':
-            return React.createElement(mohawk_1.default, { color: color, colorRandom: colorRandom });
+            return react_1.default.createElement(mohawk_1.default, { color: color, colorRandom: colorRandom });
         case 'womanLong':
-            return React.createElement(womanLong_1.default, { color: color });
+            return react_1.default.createElement(womanLong_1.default, { color: color });
         case 'womanShort':
-            return React.createElement(womanShort_1.default, { color: color });
+            return react_1.default.createElement(womanShort_1.default, { color: color });
         case 'normal':
         default:
-            return React.createElement(womanShort_1.default, { color: color });
+            return react_1.default.createElement(womanShort_1.default, { color: color });
     }
 }
 //# sourceMappingURL=index.js.map

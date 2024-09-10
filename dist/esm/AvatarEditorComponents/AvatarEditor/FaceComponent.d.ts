@@ -1,5 +1,5 @@
-import { AvatarFullConfig } from 'react-nice-avatar';
 import React from 'react';
+import { AvatarFullConfig } from 'react-nice-avatar';
 declare const FaceComponent: (config: AvatarFullConfig) => ({
     tip: string;
     configKey: string;

@@ -7,7 +7,8 @@ export default function HairWomanLong(props: { color: string }): SVGElement {
             style={{
                 bottom: '-2.2%',
                 width: '97%',
-                height: '100%'
+                height: '100%',
+                left: '2%'
             }}
             width="306"
             height="331"

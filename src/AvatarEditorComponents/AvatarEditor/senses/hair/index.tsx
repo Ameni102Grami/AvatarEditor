@@ -1,3 +1,4 @@
+import React from 'react';
 import Thick from './thick';
 import Mohawk from './mohawk';
 import WomanLong from './womanLong';

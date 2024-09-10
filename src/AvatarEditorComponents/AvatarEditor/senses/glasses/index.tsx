@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Round from './round';
 import Square from './square';
 

@@ -8,7 +8,8 @@ export default function ShirtHoody(props: { color: string; lightColor: string })
                 position: 'absolute',
                 bottom: '-2%',
                 width: '98%',
-                height: '26%'
+                height: '26%',
+                left: '2%'
             }}
             width="281"
             height="93"

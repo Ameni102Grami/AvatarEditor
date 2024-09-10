@@ -1,5 +1,5 @@
-import { AvatarFullConfig } from 'react-nice-avatar';
 import React from 'react';
+import { AvatarFullConfig } from 'react-nice-avatar';
 
 import Face from './senses/face';
 import Hair from './senses/hair';

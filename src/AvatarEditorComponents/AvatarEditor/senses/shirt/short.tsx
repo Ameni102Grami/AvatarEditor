@@ -8,7 +8,8 @@ export default function ShirtShort(props: { color: string }): SVGElement {
                 position: 'absolute',
                 bottom: '-2.5%',
                 width: '100%',
-                height: '26%'
+                height: '26%',
+                left: '2%'
             }}
             width="281"
             height="93"

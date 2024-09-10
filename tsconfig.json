@@ -4,7 +4,7 @@
         "declaration": true,
         "jsx": "react",
         "lib": ["es5", "es2015", "es2016", "dom", "esnext"],
-        "target": "es2016",
+        "target": "es6",
         "module": "commonjs",
         "esModuleInterop": true,
         "noImplicitAny": true,
@@ -12,7 +12,9 @@
         "outDir": "dist/esm",
         "strict": true,
         "skipLibCheck": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "allowJs": true
     },
-    "include": ["src/**/*.ts","src/**/*.tsx", "declarations.d.ts"]
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["./node_modules/**/*"]
 }
