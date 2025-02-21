@@ -56,10 +56,13 @@ This is directly imported from [`react-nice-avatar`](https://github.com/dapi-lab
 ## Demo
 
 Check out the demo video to see it in action:
+
+```html
     <video src="./src/assets/Screen%20Recording%202025-02-21%20at%206.52.58 AM.mov"
        width="100%"
        controls
        autoplay="false"> Your browser does not support the video tag. </video>
+```
 
 ## Example Output
 
