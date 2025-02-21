@@ -1,4 +1,4 @@
 export default function hat(props: {
-    color: string;
-    style: string;
-}): SVGElement;
+    color?: string;
+    style?: string;
+}): JSX.Element;

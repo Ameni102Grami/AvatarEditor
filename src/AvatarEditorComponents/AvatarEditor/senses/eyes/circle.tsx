@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function EyesCircle(): SVGElement {
+export default function EyesCircle():  JSX.Element {
     return (
         <svg
             style={{

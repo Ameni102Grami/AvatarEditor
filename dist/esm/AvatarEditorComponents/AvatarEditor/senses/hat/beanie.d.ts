@@ -1,3 +1,3 @@
 export default function HatBeanie(props: {
-    color: string;
-}): SVGElement;
+    color?: string;
+}): JSX.Element;

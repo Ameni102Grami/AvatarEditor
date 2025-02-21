@@ -1,3 +1,4 @@
 export default function glasses(props: {
     style: string;
-}): any;
+    color?: string;
+}): JSX.Element;

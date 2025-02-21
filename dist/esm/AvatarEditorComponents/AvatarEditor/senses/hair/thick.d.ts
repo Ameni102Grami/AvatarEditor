@@ -1,4 +1,4 @@
 export default function HairThick(props: {
     color: string;
-    colorRandom: boolean;
+    colorRandom?: boolean;
 }): JSX.Element;

@@ -41,11 +41,12 @@ const up_1 = __importDefault(require("./senses/eyebrow/up"));
 const upWoman_1 = __importDefault(require("./senses/eyebrow/upWoman"));
 const icons_1 = require("@ant-design/icons");
 const FaceComponent = (config) => {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
     return [
         {
             tip: 'Face',
             configKey: 'faceColor',
-            component: react_1.default.createElement(face_1.default, { color: config === null || config === void 0 ? void 0 : config.faceColor }),
+            component: react_1.default.createElement(face_1.default, { color: (_a = config === null || config === void 0 ? void 0 : config.faceColor) !== null && _a !== void 0 ? _a : '' }),
             children: [
                 {
                     configKey: 'faceColor',
@@ -72,32 +73,32 @@ const FaceComponent = (config) => {
         {
             tip: 'Hair',
             configKey: 'hairStyle',
-            component: react_1.default.createElement(hair_1.default, { style: config === null || config === void 0 ? void 0 : config.hairStyle, color: config.hairColor }),
+            component: react_1.default.createElement(hair_1.default, { style: (_b = config === null || config === void 0 ? void 0 : config.hairStyle) !== null && _b !== void 0 ? _b : '', color: (_c = config.hairColor) !== null && _c !== void 0 ? _c : '' }),
             children: [
                 {
                     configKey: 'hairStyle',
                     senseType: 'thick',
-                    sense: react_1.default.createElement(thick_1.default, { color: config === null || config === void 0 ? void 0 : config.hairColor })
+                    sense: react_1.default.createElement(thick_1.default, { color: (_d = config === null || config === void 0 ? void 0 : config.hairColor) !== null && _d !== void 0 ? _d : '' })
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'mohawk',
-                    sense: react_1.default.createElement(mohawk_1.default, { color: config === null || config === void 0 ? void 0 : config.hairColor })
+                    sense: react_1.default.createElement(mohawk_1.default, { color: (_e = config === null || config === void 0 ? void 0 : config.hairColor) !== null && _e !== void 0 ? _e : '' })
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'womanLong',
-                    sense: react_1.default.createElement(womanLong_1.default, { color: config === null || config === void 0 ? void 0 : config.hairColor })
+                    sense: react_1.default.createElement(womanLong_1.default, { color: (_f = config === null || config === void 0 ? void 0 : config.hairColor) !== null && _f !== void 0 ? _f : '' })
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'womanShort',
-                    sense: react_1.default.createElement(womanShort_1.default, { color: config === null || config === void 0 ? void 0 : config.hairColor })
+                    sense: react_1.default.createElement(womanShort_1.default, { color: (_g = config === null || config === void 0 ? void 0 : config.hairColor) !== null && _g !== void 0 ? _g : '' })
                 },
                 {
                     configKey: 'hairStyle',
                     senseType: 'hairNormal',
-                    sense: react_1.default.createElement(normal_1.default, { color: config === null || config === void 0 ? void 0 : config.hairColor })
+                    sense: react_1.default.createElement(normal_1.default, { color: (_h = config === null || config === void 0 ? void 0 : config.hairColor) !== null && _h !== void 0 ? _h : '' })
                 }
             ]
         },
@@ -109,12 +110,12 @@ const FaceComponent = (config) => {
                 {
                     configKey: 'hatStyle',
                     senseType: 'beanie',
-                    sense: react_1.default.createElement(beanie_1.default, { color: config === null || config === void 0 ? void 0 : config.hatColor })
+                    sense: react_1.default.createElement(beanie_1.default, { color: (_j = config === null || config === void 0 ? void 0 : config.hatColor) !== null && _j !== void 0 ? _j : '' })
                 },
                 {
                     configKey: 'hatStyle',
                     senseType: 'turban',
-                    sense: react_1.default.createElement(turban_1.default, { color: config === null || config === void 0 ? void 0 : config.hatColor })
+                    sense: react_1.default.createElement(turban_1.default, { color: (_k = config === null || config === void 0 ? void 0 : config.hatColor) !== null && _k !== void 0 ? _k : 'defaultColor' })
                 },
                 {
                     configKey: 'hatStyle',
@@ -126,7 +127,7 @@ const FaceComponent = (config) => {
         {
             tip: 'Eyes',
             configKey: 'eyeStyle',
-            component: react_1.default.createElement(eyes_1.default, { style: config === null || config === void 0 ? void 0 : config.eyeStyle, color: "#fff" }),
+            component: react_1.default.createElement(eyes_1.default, { style: (_l = config === null || config === void 0 ? void 0 : config.eyeStyle) !== null && _l !== void 0 ? _l : '', color: "#fff" }),
             children: [
                 { configKey: 'eyeStyle', senseType: 'circle', sense: react_1.default.createElement(circle_1.default, null) },
                 { configKey: 'eyeStyle', senseType: 'smile', sense: react_1.default.createElement(smile_1.default, null) },
@@ -136,7 +137,7 @@ const FaceComponent = (config) => {
         {
             tip: 'Glasses',
             configKey: 'glassesStyle',
-            component: react_1.default.createElement(glasses_1.default, { style: config === null || config === void 0 ? void 0 : config.glassesStyle, color: "#fff" }),
+            component: react_1.default.createElement(glasses_1.default, { style: (_m = config === null || config === void 0 ? void 0 : config.glassesStyle) !== null && _m !== void 0 ? _m : '', color: "#fff" }),
             children: [
                 {
                     configKey: 'glassesStyle',
@@ -153,7 +154,7 @@ const FaceComponent = (config) => {
         {
             tip: 'Ear',
             configKey: 'earSize',
-            component: react_1.default.createElement(ear_1.default, { size: config === null || config === void 0 ? void 0 : config.earSize, color: config.faceColor }),
+            component: react_1.default.createElement(ear_1.default, { size: (_o = config === null || config === void 0 ? void 0 : config.earSize) !== null && _o !== void 0 ? _o : "", color: config.faceColor }),
             children: [
                 {
                     configKey: 'earSize',

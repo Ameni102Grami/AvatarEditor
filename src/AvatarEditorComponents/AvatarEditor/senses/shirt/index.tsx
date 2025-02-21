@@ -5,9 +5,11 @@ import Hoody from './hoody';
 import Short from './short';
 import Polo from './polo';
 
-export default function shirt(props: { color: string; style: string }): SVGElement {
+export default function shirt(props: { color?: string; style?: string }): JSX.Element {
     const { style, color } = props;
-    const secondColor = chroma(color).brighten(1).hex();
+    const secondColor = chroma(color as string)
+        .brighten(1)
+        .hex();
     switch (style) {
         case 'hoody':
             return <Hoody color={color} lightColor={secondColor} />;

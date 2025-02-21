@@ -110,7 +110,7 @@ const pickByHashCode = (code: number, type: keyof DefaultOptions, opts?: PickByH
     return myDefaultOptions[index];
 };
 
-export const genConfig: GenConfigFunc = (userConfig = {}) => {
+export const genConfig: GenConfigFunc = (userConfig: any) => {
     const isSeedConfig = typeof userConfig === 'string';
     const hashCode = (isSeedConfig && stringToHashCode(userConfig)) || 0;
     const response = {} as Required<AvatarFullConfig>;

@@ -7,7 +7,7 @@ import useScrollManager from './useScrollManager';
 
 interface AvatarListProps {
     selectConfig: (item: Required<AvatarFullConfig>) => void;
-    config: Required<AvatarFullConfig>;
+    config: Required<AvatarFullConfig> & { id: string };
 }
 
 const AvatarList: React.FC<AvatarListProps> = ({ selectConfig, config }) => {

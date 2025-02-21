@@ -67,7 +67,7 @@ const pickByHashCode = (code, type, opts) => {
     const index = code % myDefaultOptions.length;
     return myDefaultOptions[index];
 };
-const genConfig = (userConfig = {}) => {
+const genConfig = (userConfig) => {
     const isSeedConfig = typeof userConfig === 'string';
     const hashCode = (isSeedConfig && stringToHashCode(userConfig)) || 0;
     const response = {};

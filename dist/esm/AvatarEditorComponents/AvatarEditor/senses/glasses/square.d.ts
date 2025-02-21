@@ -1,1 +1,1 @@
-export default function GlassesSquare(): SVGElement;
+export default function GlassesSquare(): JSX.Element;

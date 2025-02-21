@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function EarBig(props: { color: string }): SVGElement {
+export default function EarBig(props: { color?: string }): JSX.Element {
     const { color } = props;
     return (
         <svg

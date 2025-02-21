@@ -1,7 +1,7 @@
 import React from 'react';
 import chroma from 'chroma-js';
 
-export default function HairMohawk(props: { color: string; colorRandom: boolean }): JSX.Element {
+export default function HairMohawk(props: { color: string; colorRandom?: boolean }): JSX.Element {
     const { color, colorRandom } = props;
     const mainColor = colorRandom ? color : '#171921';
     const subColor = colorRandom ? chroma(color).brighten(2).hex() : '#717376';

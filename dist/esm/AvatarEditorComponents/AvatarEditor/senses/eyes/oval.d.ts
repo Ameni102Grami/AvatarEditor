@@ -1,1 +1,1 @@
-export default function EyesOval(): SVGElement;
+export default function EyesOval(): JSX.Element;

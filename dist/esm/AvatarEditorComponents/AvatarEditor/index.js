@@ -11,6 +11,7 @@ const AvatarList_1 = __importDefault(require("../../AvatarList"));
 const FaceComponent_1 = __importDefault(require("./FaceComponent"));
 const SectionWrapper_1 = __importDefault(require("./SectionWrapper"));
 const AvatarEditor = ({ config, updateConfig, setConfig, withAvatarList = true }) => {
+    var _a;
     const switchConfig = (type, currentOpt) => {
         updateConfig(type, currentOpt);
     };
@@ -26,7 +27,7 @@ const AvatarEditor = ({ config, updateConfig, setConfig, withAvatarList = true }
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement(antd_1.Flex, { align: "center", justify: "center", vertical: true, gap: 8, style: {
-                background: `linear-gradient(45deg, ${extractColorsFromGradient(avatarBg)[0]}, #ffffff)`,
+                background: `linear-gradient(45deg, ${avatarBg && ((_a = extractColorsFromGradient(avatarBg)) === null || _a === void 0 ? void 0 : _a[0])}, #ffffff)`,
                 width: '100%',
                 height: '100%',
                 borderRadius: '16px 16px 0px 0px'
@@ -35,7 +36,8 @@ const AvatarEditor = ({ config, updateConfig, setConfig, withAvatarList = true }
             react_1.default.createElement(react_nice_avatar_1.default, Object.assign({}, config, { style: { width: '10rem', height: '10rem' } })),
             withAvatarList && (react_1.default.createElement(antd_1.Flex, { align: "center", justify: "center", style: { maxWidth: '100%' } },
                 react_1.default.createElement(AvatarList_1.default, { config: config, selectConfig: (newConfig) => {
-                        setConfig(newConfig);
+                        if (setConfig)
+                            setConfig(newConfig);
                         setShowSensesStyle((prev) => (Object.assign(Object.assign({}, prev), { children: [] })));
                     } })))),
         react_1.default.createElement("span", { className: "select-avatar-title" }, "Customize your avatar"),

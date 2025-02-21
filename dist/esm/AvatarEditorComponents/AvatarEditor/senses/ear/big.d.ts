@@ -1,3 +1,3 @@
 export default function EarBig(props: {
-    color: string;
-}): SVGElement;
+    color?: string;
+}): JSX.Element;

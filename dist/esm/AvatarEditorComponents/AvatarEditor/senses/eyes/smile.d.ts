@@ -1,1 +1,1 @@
-export default function EyesSmile(): SVGElement;
+export default function EyesSmile(): JSX.Element;

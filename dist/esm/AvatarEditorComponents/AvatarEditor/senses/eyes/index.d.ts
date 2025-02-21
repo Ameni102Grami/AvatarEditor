@@ -1,3 +1,4 @@
 export default function eyes(props: {
     style: string;
-}): SVGElement;
+    color?: string;
+}): JSX.Element;

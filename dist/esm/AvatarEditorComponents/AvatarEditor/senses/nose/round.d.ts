@@ -1,1 +1,1 @@
-export default function NoseRound(): SVGElement;
+export default function NoseRound(): JSX.Element;

@@ -1,1 +1,1 @@
-export default function EyebrowUpWoman(): SVGElement;
+export default function EyebrowUpWoman(): JSX.Element;

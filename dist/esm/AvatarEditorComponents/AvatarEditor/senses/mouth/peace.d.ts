@@ -1,1 +1,1 @@
-export default function MouthPeace(): SVGElement;
+export default function MouthPeace(): JSX.Element;

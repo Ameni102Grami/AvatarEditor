@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MouthLaugh(): SVGElement {
+export default function MouthLaugh(): JSX.Element {
     const id = `mouth-laugh-id`;
     return (
         <svg

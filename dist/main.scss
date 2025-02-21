@@ -166,4 +166,94 @@
   cursor: pointer;
 }
 
+.select-avatar-wrapper {
+  height: 100vh;
+  background: linear-gradient(116.82deg, #edf2f7 0%, #deeeff 100%);
+}
+
+.student-avatar-wrapper {
+  padding: 40px;
+  background-image: url("src/assets/icons/BG-User-Info.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.student-avatar {
+  width: 650px;
+  height: 660px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.avatars-wrapper {
+  height: 100%;
+}
+
+.select-avatars-wrapper {
+  overflow-y: scroll;
+}
+
+.select-avatars-wrapper::-webkit-scrollbar {
+  background-color: white !important;
+}
+
+.select-avatars-wrapper::-webkit-scrollbar-track {
+  background-color: white !important;
+  box-shadow: unset !important;
+}
+
+.select-avatars-wrapper::-webkit-scrollbar-thumb {
+  background-color: blue;
+}
+
+.select-avatar-action-button {
+  width: 25%;
+  height: 48px;
+  border: 1px solid rgb(31, 138, 244);
+}
+
+.select-avatar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
+}
+
+.avatar-wrapper {
+  cursor: pointer;
+  position: relative;
+}
+
+.selected {
+  border: 2px solid rgb(31, 138, 244);
+  border-radius: 50%;
+}
+
+.select-avatar-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px;
+  color: rgb(61, 65, 89);
+}
+
+@media only screen and (max-width: 500px) {
+  .select-avatar-action-button {
+    width: 100%;
+  }
+  .student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .action-buttons-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+  }
+}
+.avatar-editor-modal .ant-modal-content {
+  padding: 0px !important;
+  border-radius: 16px;
+}
+
 /*# sourceMappingURL=main.scss.map */

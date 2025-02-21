@@ -4,7 +4,7 @@ import Laugh from './laugh';
 import Smile from './smile';
 import Peace from './peace';
 
-export default function mouth(props: { style: string }): SVGElement {
+export default function mouth(props: { style?: string; color?: string }): JSX.Element {
     const { style } = props;
     switch (style) {
         case 'laugh':

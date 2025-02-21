@@ -1,4 +1,4 @@
 export default function ear(props: {
-    color: string;
-    size: string;
-}): SVGElement;
+    color?: string;
+    size?: string;
+}): JSX.Element;

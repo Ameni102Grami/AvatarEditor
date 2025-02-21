@@ -16,7 +16,7 @@ function hat(props) {
             return react_1.default.createElement(turban_1.default, { color: color });
         case 'none':
         default:
-            return null;
+            return react_1.default.createElement(react_1.default.Fragment, null);
     }
 }
 //# sourceMappingURL=index.js.map

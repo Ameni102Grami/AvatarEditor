@@ -1,3 +1,4 @@
 export default function nose(props: {
-    style: string;
-}): SVGElement;
+    style?: string;
+    color?: string;
+}): JSX.Element;

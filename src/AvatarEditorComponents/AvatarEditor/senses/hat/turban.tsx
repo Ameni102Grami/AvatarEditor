@@ -1,5 +1,5 @@
 import React from 'react';
-export default function HatTurban(props: { color: string }): SVGElement {
+export default function HatTurban(props: { color?: string }): JSX.Element {
     const { color } = props;
     return (
         <svg

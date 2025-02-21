@@ -12,7 +12,7 @@ const AvatarEditor = ({
     setConfig,
     withAvatarList = true
 }: {
-    config: Required<AvatarFullConfig>;
+    config: Required<AvatarFullConfig> & { id: string };
     updateConfig: Function;
     setConfig?: React.Dispatch<React.SetStateAction<Required<AvatarFullConfig>>>;
     withAvatarList?: boolean;
@@ -41,7 +41,7 @@ const AvatarEditor = ({
                 vertical
                 gap={8}
                 style={{
-                    background: `linear-gradient(45deg, ${extractColorsFromGradient(avatarBg)[0]}, #ffffff)`,
+                    background: `linear-gradient(45deg, ${avatarBg && extractColorsFromGradient(avatarBg)?.[0]}, #ffffff)`,
                     width: '100%',
                     height: '100%',
                     borderRadius: '16px 16px 0px 0px'
@@ -54,7 +54,7 @@ const AvatarEditor = ({
                         <AvatarList
                             config={config}
                             selectConfig={(newConfig: Required<AvatarFullConfig>) => {
-                                setConfig(newConfig);
+                                if (setConfig) setConfig(newConfig);
                                 setShowSensesStyle((prev: Required<AvatarFullConfig>) => ({
                                     ...prev,
                                     children: []
@@ -64,14 +64,16 @@ const AvatarEditor = ({
                     </Flex>
                 )}
             </Flex>
-            <span className="select-avatar-title">Customize your avatar</span>
-            <Flex align="center" justify="center" wrap="wrap" gap={10}>
-                {showSensesStyle &&
-                    showSensesStyle?.children.map((el: any, idx: number) => (
-                        <Flex key={idx} className="avatar-sense" onClick={() => switchConfig(el.configKey, el.senseType)}>
-                            {el.sense}
-                        </Flex>
-                    ))}
+            <Flex vertical gap={10}>
+                <span className="select-avatar-title">Customize your avatar</span>
+                <Flex align="center" justify="center" wrap="wrap" gap={10}>
+                    {showSensesStyle &&
+                        showSensesStyle?.children.map((el: any, idx: number) => (
+                            <Flex key={idx} className="avatar-sense" onClick={() => switchConfig(el.configKey, el.senseType)}>
+                                {el.sense}
+                            </Flex>
+                        ))}
+                </Flex>
             </Flex>
             <div className="avatar-editor rounded-full  px-3 py-2 gap-10 flex items-center">
                 {components.map((item, index) => (

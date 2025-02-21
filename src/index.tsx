@@ -6,18 +6,19 @@ const ReactAvatarEditor = ({
     setConfig,
     withAvatarList = true
 }: {
-    config: Required<AvatarFullConfig>;
+    config: Required<AvatarFullConfig> & { id?: string };
     setConfig?: React.Dispatch<React.SetStateAction<Required<AvatarFullConfig>>>;
     withAvatarList?: boolean;
 }) => {
     useEffect(() => {
-        setConfig(genConfig());
+        if (setConfig) setConfig(genConfig());
     }, []);
-    const updateConfig = (key: string, value: string) => {
-        config[key] = value;
-        setConfig((prev) => ({ ...prev, key: value }));
+    const updateConfig = (key: keyof AvatarFullConfig, value: string) => {
+        config[key] = value as never;
+        if (setConfig) setConfig((prev) => ({ ...prev, [key]: value }));
     };
-    return <AvatarEditor config={config ? config : genConfig()} updateConfig={updateConfig} setConfig={setConfig} withAvatarList={withAvatarList} />;
+
+    return <AvatarEditor config={config ? (config as any) : genConfig()} updateConfig={updateConfig} setConfig={setConfig} withAvatarList={withAvatarList} />;
 };
 
 export default ReactAvatarEditor;

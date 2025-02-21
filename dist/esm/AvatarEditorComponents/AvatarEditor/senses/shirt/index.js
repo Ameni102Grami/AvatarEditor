@@ -11,7 +11,9 @@ const short_1 = __importDefault(require("./short"));
 const polo_1 = __importDefault(require("./polo"));
 function shirt(props) {
     const { style, color } = props;
-    const secondColor = (0, chroma_js_1.default)(color).brighten(1).hex();
+    const secondColor = (0, chroma_js_1.default)(color)
+        .brighten(1)
+        .hex();
     switch (style) {
         case 'hoody':
             return react_1.default.createElement(hoody_1.default, { color: color, lightColor: secondColor });

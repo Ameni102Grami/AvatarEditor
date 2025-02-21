@@ -1,4 +1,4 @@
 export default function HairMohawk(props: {
     color: string;
-    colorRandom: boolean;
+    colorRandom?: boolean;
 }): JSX.Element;

@@ -35,7 +35,7 @@ interface NiceAvatarProps {
 }
 
 const ReactNiceAvatar: React.FC<NiceAvatarProps> = ({ id, className, style, shape = 'circle', hairColorRandom = false, ...props }) => {
-    const config = genConfig(props);
+    const config = genConfig(props as any);
     const borderRadius = shape === 'circle' ? '100%' : shape === 'rounded' ? '6px' : 0;
 
     return (

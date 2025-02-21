@@ -2,13 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.genConfig = exports.defaultOptions = exports.pickRandomFromList = void 0;
 const pickRandomFromList = (data, { avoidList = [], usually = [] } = {}) => {
-    // Filter out avoid options
     const avoidSet = new Set(avoidList.filter((item) => Boolean(item)));
     let myData = data.filter((item) => !avoidSet.has(item));
-    // Increase selecting possibility of usually options
     const usuallyData = usually.filter(Boolean).reduce((acc, cur) => acc.concat(new Array(15).fill(cur)), []);
     myData = myData.concat(usuallyData);
-    // Pick randon one from the list
     const amount = myData.length;
     const randomIdx = Math.floor(Math.random() * amount);
     return myData[randomIdx];
@@ -49,17 +46,15 @@ const stringToHashCode = (str) => {
     for (let i = 0; i < str.length; i++) {
         char = str.charCodeAt(i);
         hash = (hash << 5) - hash + char;
-        hash |= 0; // Convert to 32bit integer
+        hash |= 0;
     }
     return Math.abs(hash);
 };
 const pickByHashCode = (code, type, opts) => {
     const avoidList = (opts && opts.avoidList) || [];
     const usually = (opts && opts.usually) || [];
-    // Filter out avoid options
     const avoidSet = new Set(avoidList);
     let myDefaultOptions = exports.defaultOptions[type].filter((item) => !avoidSet.has(item));
-    // Increase selecting possibility of usually options
     myDefaultOptions = usually
         .filter(Boolean)
         .reduce((acc, cur) => acc.concat(new Array(15).fill(cur)), [])

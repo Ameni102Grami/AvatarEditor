@@ -1,3 +1,3 @@
 export default function HairWomanShort(props: {
     color: string;
-}): SVGElement;
+}): JSX.Element;

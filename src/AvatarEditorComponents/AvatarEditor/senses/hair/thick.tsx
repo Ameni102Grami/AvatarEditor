@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HairThick(props: { color: string; colorRandom: boolean }): JSX.Element {
+export default function HairThick(props: { color: string; colorRandom?: boolean }): JSX.Element {
     const { color, colorRandom } = props;
     return (
         <svg

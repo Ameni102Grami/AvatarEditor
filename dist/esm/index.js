@@ -31,11 +31,13 @@ const react_nice_avatar_1 = require("react-nice-avatar");
 const AvatarEditor_1 = __importDefault(require("./AvatarEditorComponents/AvatarEditor"));
 const ReactAvatarEditor = ({ config = (0, react_nice_avatar_1.genConfig)(), setConfig, withAvatarList = true }) => {
     (0, react_1.useEffect)(() => {
-        setConfig((0, react_nice_avatar_1.genConfig)());
+        if (setConfig)
+            setConfig((0, react_nice_avatar_1.genConfig)());
     }, []);
     const updateConfig = (key, value) => {
         config[key] = value;
-        setConfig((prev) => (Object.assign(Object.assign({}, prev), { key: value })));
+        if (setConfig)
+            setConfig((prev) => (Object.assign(Object.assign({}, prev), { [key]: value })));
     };
     return react_1.default.createElement(AvatarEditor_1.default, { config: config ? config : (0, react_nice_avatar_1.genConfig)(), updateConfig: updateConfig, setConfig: setConfig, withAvatarList: withAvatarList });
 };

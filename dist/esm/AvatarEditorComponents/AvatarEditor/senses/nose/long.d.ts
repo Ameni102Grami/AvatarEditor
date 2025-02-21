@@ -1,1 +1,1 @@
-export default function NoseLong(): SVGElement;
+export default function NoseLong(): JSX.Element;
