@@ -55,7 +55,11 @@ This is directly imported from [`react-nice-avatar`](https://github.com/dapi-lab
 
 ## Demo
 
-Check out the demo video to see it in action: [![Demo Video](./src/assets/Screen%20Recording%202025-02-21%20at%206.52.58 AM.mov)]
+Check out the demo video to see it in action:
+    <video src="./src/assets/Screen%20Recording%202025-02-21%20at%206.52.58 AM.mov"
+       width="100%"
+       controls
+       autoplay="false"> Your browser does not support the video tag. </video>
 
 ## Example Output
 
@@ -64,3 +68,5 @@ The `ReactNiceAvatar` component renders the avatar based on the provided configu
 ## License
 
 This project is licensed under the MIT License.
+
+```
