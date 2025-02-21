@@ -7,9 +7,9 @@ A React package that provides an easy-to-use avatar editor along with a customiz
 You can install the package via npm or yarn:
 
 ```sh
-npm install your-package-name
+npm install react-avatar-editor-v1
 # or
-yarn add your-package-name
+yarn add react-avatar-editor-v1
 ```
 
 ## Usage
@@ -17,22 +17,23 @@ yarn add your-package-name
 ### Importing Components
 
 ```tsx
-import React, { useState } from 'react';
-import ReactAvatarEditor, { ReactNiceAvatar } from 'your-package-name';
-import { genConfig } from 'react-nice-avatar';
+import React, { useState } from "react";
+import ReactAvatarEditor, { ReactNiceAvatar } from "react-avatar-editor-v1";
+import "react-avatar-editor-v1/dist/main.scss";
+import { genConfig } from "react-nice-avatar";
 
 const App = () => {
-    const [config, setConfig] = useState(genConfig());
+  const [config, setConfig] = useState(genConfig());
 
-    return (
-        <div>
-            {/* Display the avatar */}
-            <ReactNiceAvatar {...config} style={{ width: '10rem', height: '10rem' }} />
-
-            {/* Avatar Editor Component */}
-            <ReactAvatarEditor config={config} setConfig={setConfig} />
-        </div>
-    );
+  return (
+    <div>
+      {/* Display the avatar */}
+      <ReactNiceAvatar {...config} style={{ width: "10rem", height: "10rem" }} />
+      
+      {/* Avatar Editor Component */}
+      <ReactAvatarEditor config={config} setConfig={setConfig} />
+    </div>
+  );
 };
 
 export default App;
@@ -42,20 +43,17 @@ export default App;
 
 ### `ReactAvatarEditor`
 
-| Prop             | Type                                         | Description                                        |
-| ---------------- | -------------------------------------------- | -------------------------------------------------- |
-| `config`         | `AvatarFullConfig`                           | Avatar configuration object.                       |
-| `setConfig`      | `Dispatch<SetStateAction<AvatarFullConfig>>` | Function to update the avatar config.              |
-| `withAvatarList` | `boolean` (default: `true`)                  | Show/hide additional avatar customization options. |
+| Prop           | Type                                         | Description                                      |
+|---------------|--------------------------------------------|--------------------------------------------------|
+| `config`      | `AvatarFullConfig`                        | Avatar configuration object.                     |
+| `setConfig`   | `Dispatch<SetStateAction<AvatarFullConfig>>` | Function to update the avatar config.           |
+| `withAvatarList` | `boolean` (default: `true`)              | Show/hide additional avatar customization options. |
 
 ### `ReactNiceAvatar`
-
 This is directly imported from [`react-nice-avatar`](https://github.com/dapi-labs/react-nice-avatar) and can be used to display an avatar based on the `config` state.
 
 ## Example Output
-
 The `ReactNiceAvatar` component renders the avatar based on the provided configuration, while `ReactAvatarEditor` allows users to modify the avatar features in real time.
 
 ## License
-
 This project is licensed under the MIT License.
