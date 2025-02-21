@@ -64,7 +64,7 @@ const AvatarEditor = ({
                     </Flex>
                 )}
             </Flex>
-            <Flex vertical gap={10}>
+            <Flex vertical align="center" justify="center" gap={10} style={{ width: '100%' }}>
                 <span className="select-avatar-title">Customize your avatar</span>
                 <Flex align="center" justify="center" wrap="wrap" gap={10}>
                     {showSensesStyle &&

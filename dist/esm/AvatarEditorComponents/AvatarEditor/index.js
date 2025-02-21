@@ -40,9 +40,10 @@ const AvatarEditor = ({ config, updateConfig, setConfig, withAvatarList = true }
                             setConfig(newConfig);
                         setShowSensesStyle((prev) => (Object.assign(Object.assign({}, prev), { children: [] })));
                     } })))),
-        react_1.default.createElement("span", { className: "select-avatar-title" }, "Customize your avatar"),
-        react_1.default.createElement(antd_1.Flex, { align: "center", justify: "center", wrap: "wrap", gap: 10 }, showSensesStyle &&
-            (showSensesStyle === null || showSensesStyle === void 0 ? void 0 : showSensesStyle.children.map((el, idx) => (react_1.default.createElement(antd_1.Flex, { key: idx, className: "avatar-sense", onClick: () => switchConfig(el.configKey, el.senseType) }, el.sense))))),
+        react_1.default.createElement(antd_1.Flex, { vertical: true, align: "center", justify: "center", gap: 10, style: { width: '100%' } },
+            react_1.default.createElement("span", { className: "select-avatar-title" }, "Customize your avatar"),
+            react_1.default.createElement(antd_1.Flex, { align: "center", justify: "center", wrap: "wrap", gap: 10 }, showSensesStyle &&
+                (showSensesStyle === null || showSensesStyle === void 0 ? void 0 : showSensesStyle.children.map((el, idx) => (react_1.default.createElement(antd_1.Flex, { key: idx, className: "avatar-sense", onClick: () => switchConfig(el.configKey, el.senseType) }, el.sense)))))),
         react_1.default.createElement("div", { className: "avatar-editor rounded-full  px-3 py-2 gap-10 flex items-center" }, components.map((item, index) => (react_1.default.createElement(SectionWrapper_1.default, { key: index, className: "w-8 h-8 rounded-full p-2 mx-2", tip: item.tip, switchConfig: () => setShowSensesStyle(item) }, item.component))))));
 };
 exports.default = AvatarEditor;

@@ -26,8 +26,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactNiceAvatar = void 0;
 const react_1 = __importStar(require("react"));
-const react_nice_avatar_1 = require("react-nice-avatar");
+const react_nice_avatar_1 = __importStar(require("react-nice-avatar"));
+exports.ReactNiceAvatar = react_nice_avatar_1.default;
 const AvatarEditor_1 = __importDefault(require("./AvatarEditorComponents/AvatarEditor"));
 const ReactAvatarEditor = ({ config = (0, react_nice_avatar_1.genConfig)(), setConfig, withAvatarList = true }) => {
     (0, react_1.useEffect)(() => {

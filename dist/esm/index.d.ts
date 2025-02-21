@@ -1,5 +1,5 @@
 import React from 'react';
-import { AvatarFullConfig } from 'react-nice-avatar';
+import ReactNiceAvatar, { AvatarFullConfig } from 'react-nice-avatar';
 declare const ReactAvatarEditor: ({ config, setConfig, withAvatarList }: {
     config: Required<AvatarFullConfig> & {
         id?: string;
@@ -7,4 +7,5 @@ declare const ReactAvatarEditor: ({ config, setConfig, withAvatarList }: {
     setConfig?: React.Dispatch<React.SetStateAction<Required<AvatarFullConfig>>>;
     withAvatarList?: boolean;
 }) => React.JSX.Element;
+export { ReactNiceAvatar };
 export default ReactAvatarEditor;

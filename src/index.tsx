@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AvatarFullConfig, genConfig } from 'react-nice-avatar';
+import ReactNiceAvatar, { AvatarFullConfig, genConfig } from 'react-nice-avatar';
 import AvatarEditor from './AvatarEditorComponents/AvatarEditor';
 const ReactAvatarEditor = ({
     config = genConfig(),
@@ -20,5 +20,5 @@ const ReactAvatarEditor = ({
 
     return <AvatarEditor config={config ? (config as any) : genConfig()} updateConfig={updateConfig} setConfig={setConfig} withAvatarList={withAvatarList} />;
 };
-
+export { ReactNiceAvatar };
 export default ReactAvatarEditor;
