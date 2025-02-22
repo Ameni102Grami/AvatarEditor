@@ -12,7 +12,13 @@ interface AvatarListProps {
 
 const AvatarList: React.FC<AvatarListProps> = ({ selectConfig, config }) => {
     const displayCount = 200;
-    const [avatarConfigList, setAvatarConfigList] = useState<any[]>([]);
+    const genConfigList = (count: number) => {
+        return new Array(count).fill(null).map(() => ({
+            ...genConfig({ isGradient: Boolean(Math.round(Math.random())) }),
+            id: 'n_' + Math.random().toString(36).substr(2, 9)
+        }));
+    };
+    const [avatarConfigList, setAvatarConfigList] = useState(genConfigList(displayCount));
     const listId = 'avatarList';
 
     useEffect(() => {
@@ -20,12 +26,7 @@ const AvatarList: React.FC<AvatarListProps> = ({ selectConfig, config }) => {
         fetchListWidth();
     }, []);
 
-    const genConfigList = (count: number): any[] => {
-        return new Array(count).fill(null).map(() => ({
-            ...genConfig({ isGradient: Boolean(Math.round(Math.random())) }),
-            id: 'n_' + Math.random().toString(36).substr(2, 9)
-        }));
-    };
+   
 
     const fetchListWidth = (count = 0) => {
         if (count > 20) return;
