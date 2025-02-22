@@ -46,7 +46,7 @@ export default App;
 | ---------------- | -------------------------------------------- | -------------------------------------------------- |
 | `config`         | `AvatarFullConfig`                           | Avatar configuration object.                       |
 | `setConfig`      | `Dispatch<SetStateAction<AvatarFullConfig>>` | Function to update the avatar config.              |
-| `withAvatarList` | `boolean` (default: `true`)                  | Show/hide additional avatar customization options. |
+| `withAvatarList` | `boolean` (default: `true`)                  | Show/hide additional avatars list.                 |
 
 ### `ReactNiceAvatar`
 
