@@ -20,10 +20,9 @@ yarn add react-avatar-editor-v1
 import React, { useState } from 'react';
 import ReactAvatarEditor, { ReactNiceAvatar } from 'react-avatar-editor-v1';
 import 'react-avatar-editor-v1/dist/main.scss';
-import { genConfig } from 'react-nice-avatar';
 
 const App = () => {
-    const [config, setConfig] = useState(genConfig());
+    const [config, setConfig] = useState({});
 
     return (
         <div>
