@@ -18,7 +18,7 @@ const ReactAvatarEditor = ({
         if (setConfig) setConfig((prev) => ({ ...prev, [key]: value }));
     };
 
-    return <AvatarEditor config={config ? (config as any) : genConfig()} updateConfig={updateConfig} setConfig={setConfig} withAvatarList={withAvatarList} />;
+    return <AvatarEditor config={config ? config : genConfig()} updateConfig={updateConfig} setConfig={setConfig} withAvatarList={withAvatarList} />;
 };
 export { ReactNiceAvatar };
 export default ReactAvatarEditor;

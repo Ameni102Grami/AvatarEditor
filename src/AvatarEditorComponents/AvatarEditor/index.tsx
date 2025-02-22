@@ -12,7 +12,7 @@ const AvatarEditor = ({
     setConfig,
     withAvatarList = true
 }: {
-    config: Required<AvatarFullConfig> & { id: string };
+    config: Required<AvatarFullConfig> & { id?: string };
     updateConfig: Function;
     setConfig?: React.Dispatch<React.SetStateAction<Required<AvatarFullConfig>>>;
     withAvatarList?: boolean;
