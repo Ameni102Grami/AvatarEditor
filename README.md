@@ -55,7 +55,8 @@ This is directly imported from [`react-nice-avatar`](https://github.com/dapi-lab
 
 ## Demo
 
-Check out the demo video to see it in action:[demo](./src/assets/demo.mov)
+Check out the demo GIF to see it in action:
+![Demo](./src/assets/demo.gif)
 
 ## Example Output
 
@@ -64,5 +65,3 @@ The `ReactNiceAvatar` component renders the avatar based on the provided configu
 ## License
 
 This project is licensed under the MIT License.
-
-```
